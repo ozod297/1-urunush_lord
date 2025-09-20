@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Men Haqimda</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="icon" type="image/png" href="./assets/icons/logo_1.jpg">
+</head>
+
+<body class="bg-gray-50">
+  <header>
+    <div class="container mx-auto flex justify-between items-center px-6 py-4">
+      <nav>
+        <ul>
+          <li>
+            <a href="./index.html">
+              <button id="meningBtn"
+                class="px-2 py-1 border-2 border-black text-black bg-white font-semibold rounded-lg hover:scale-110 hover:text-white transition duration-300">
+                <img class="w-[40px]" src="./assets/icons/Orqaga.png" alt="foto">
+              </button>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <script>
+      const btn = document.getElementById("meningBtn");
+      const natija = document.getElementById("natija");
+
+      btn.addEventListener("click", function () {
+        natija ? natija.innerText = "✅ Button ishladi!" : console.log("✅ Button ishladi!");
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") {
+          btn.click();
+        }
+      });
+    </script>
+  </header>
+
+  <main>
+    <section class="py-16 text-center">
+      <div class="max-w-xl w-full mx-auto px-4">
+        <h1 class="text-3xl font-bold mb-4 border-b-2 border-black inline-block">🎮 LORD</h1>
+        <p class="text-lg mb-6">Haqida ma'lumot</p>
+
+        <div class="border-2 border-black rounded-lg w-full h-auto mx-auto overflow-hidden">
+          <p
+            class="px-4 py-2 border-b-2 border-black text-black bg-white hover:bg-black hover:text-white transition duration-300 hover:scale-105">
+            1) Mening haqiqiy ismim: Abduqahorov Ozodbek
+          </p>
+          <p
+            class="px-4 py-2 border-b-2 border-black text-black bg-white hover:bg-black hover:text-white transition duration-300 hover:scale-105">
+            2) Yoshim 13da va 2012man
+          </p>
+          <p
+            class="px-4 py-2 border-b-2 border-black text-black bg-white hover:bg-black hover:text-white transition duration-300 hover:scale-105">
+            3) Eng yoqtirgan fanim IT
+          </p>
+          <p
+            class="px-4 py-2 border-b-2 border-black text-black bg-white hover:bg-black hover:text-white transition duration-300 hover:scale-105">
+            4) Ko'rinishim: sochim qizg‘ish, ko‘zlarim jigarrang, qoshim qora
+          </p>
+          <p
+            class="px-4 py-2 text-black bg-white hover:bg-black hover:text-white transition duration-300 hover:scale-105">
+            5) Kelajakda IT va stream sohasida ketmoqchiman
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>

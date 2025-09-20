@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parol bilan sayt</title>
+    <link rel="icon" type="image/png" href="./assets/icons/logo_1.jpg">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black text-white font-sans">
+    <ul id="aloqa" class="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-4 sm:mt-0">
+        <li><a href="./ALOQA.html"
+                class="hover:text-red-500 transition-all duration-500 ease-in-out hover:scale-110 block pl-4 pt-4">
+                ALOQA</a></li>
+    </ul>
+    <!-- Parol oynasi -->
+    <div id="parolOyna" class="flex items-center justify-center h-screen px-4">
+        <div class="bg-white text-black p-6 rounded-xl shadow-lg w-full max-w-sm text-center">
+            <h1 class="text-2xl font-bold mb-4">Saytga kirish</h1>
+            <input type="password" id="parol" placeholder="Parolni kiriting"
+                class="border rounded-lg px-4 py-2 mb-4 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"><br>
+            <button onclick="tekshir()"
+                class="bg-blue-500 text-white w-full py-2 rounded-lg hover:bg-blue-600 transition-all duration-300">
+                Kirish
+            </button>
+        </div>
+    </div>
+
+    <!-- Asosiy sayt (dastlab yashirin) -->
+    <div id="asosiy" class="hidden min-h-screen flex flex-col">
+        <!-- Navbar -->
+        <nav class="bg-black p-4 flex flex-wrap justify-between items-center">
+            <h1 class="text-xl font-bold">🎮 Mening Saytim</h1>
+            <ul class="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-4 sm:mt-0">
+                <li><a href="./index.html"
+                        class="hover:text-red-500 transition-all duration-500 ease-in-out hover:scale-110 block">LORD
+                        KIRISH</a></li>
+            </ul>
+        </nav>
+
+        <!-- Kontent -->
+        <main class="flex-1 p-6 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-4">Xush kelibsiz! ✅</h2>
+            <p class="text-gray-300 max-w-xl mx-auto">
+                Bu saytga faqat to‘g‘ri parol bilan kirish mumkin. Siz muvaffaqiyatli kirdingiz!
+            </p>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-black py-4 text-center">
+            <p class="text-sm text-gray-400">© 2025 LORD</p>
+        </footer>
+    </div>
+    <script>
+        let aloqa = document.querySelector('#aloqa')
+
+        function tekshir() {
+            let parol = document.getElementById("parol").value;
+            let togriParol = "as"; // 🔑 bu yerga o'zingiz xohlagan parolni yozing
+
+            if (parol === togriParol) {
+                document.getElementById("parolOyna").classList.add("hidden");
+                document.getElementById("asosiy").classList.remove("hidden");
+                aloqa.classList.add("hidden")
+            } else {
+                alert("❌ Parol noto‘g‘ri!");
+            }
+        }
+    </script>
+</body>
+
+</html>
